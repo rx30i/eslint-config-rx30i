@@ -1,0 +1,15 @@
+{
+  "name": "eslint-config-rx30i",
+  "version": "1.0.0",
+  "description": "Configurações compartilhadas do ESLint para projetos de rx30i.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "eslint",
+    "eslintconfig"
+  ],
+  "author": "Seu Nome",
+  "license": "ISC"
+}
