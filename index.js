@@ -3,27 +3,9 @@
 'use strict';
 
 module.exports = {
-  // --- Configurações Gerais ---
-  root: true,
-  env: {
-    node: true,
-    es2023: true,
+  globals: {
+    MyGlobal: true
   },
-
-  // --- Parser e Plugins ---
-  // Define o parser para entender TypeScript.
-  parser: '@typescript-eslint/parser',
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-  },
-
-  // --- Extensões ---
-  // Estende configurações recomendadas para JavaScript e TypeScript.
-  extends: [
-    //'eslint:recommended',
-    //'plugin:@typescript-eslint/recommended', // Regras recomendadas para TypeScript
-  ],
 
   // --- Regras Personalizadas ---
   rules: {

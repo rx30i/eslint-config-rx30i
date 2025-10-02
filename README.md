@@ -1,3 +1,9 @@
+## Instalação
+
+```bash
+npm i --save-dev git@github.com:rx30i/eslint-config-rx30i.git
+```
+
 # Sintaxe: npm install <usuário>/<repositório> --save-dev
 npm install YourUsername/eslint-config-rx30i --save-dev
 
