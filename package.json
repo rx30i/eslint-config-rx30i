@@ -4,12 +4,16 @@
   "description": "Configurações compartilhadas do ESLint para projetos de rx30i.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc"
   },
   "keywords": [
     "eslint",
     "eslintconfig"
   ],
-  "author": "Seu Nome",
-  "license": "ISC"
+  "author": "RX30I",
+  "license": "ISC",
+  "peerDependencies": {
+    "eslint": "^9.18.0"
+  }
 }

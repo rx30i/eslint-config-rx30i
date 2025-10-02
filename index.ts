@@ -1,17 +1,6 @@
-// eslint-config-rx30i/index.js
+import type { Linter } from 'eslint';
 
-'use strict';
-
-module.exports = {
-  globals: {
-    MyGlobal: true
-  },
-
-  // --- Regras Personalizadas ---
-  rules: {
-
-    // --- Prevenção de Erros Lógicos (Best Practices) ---
-
+const meuObjetoDeRegras: Partial<Record<string, Linter.RuleEntry>> = {
     'curly': 'error', // Exige o uso de chaves {} para todos os blocos de controle (if, for, etc.).
     'guard-for-in': 'error', // Exige que loops 'for...in' verifiquem a propriedade com `hasOwnProperty`.
     'no-caller': 'error', // Proíbe o uso de `arguments.caller` e `arguments.callee`, que são obsoletos.
@@ -85,7 +74,7 @@ module.exports = {
     // --- Regras Específicas para TypeScript (@typescript-eslint) ---
 
     // Desabilita a regra base de `no-unused-vars` para usar a versão do TypeScript, que entende interfaces, tipos, etc.
-    'no-unused-vars': 'off',
+    //'no-unused-vars': 'off',
     '@typescript-eslint/no-unused-vars': ['error', {
       caughtErrors: 'all',
       caughtErrorsIgnorePattern: '^_',
@@ -94,5 +83,4 @@ module.exports = {
     }], // Versão de `no-unused-vars` que entende TypeScript. Permite ignorar variáveis prefixadas com `_`.
     '@typescript-eslint/no-unsafe-assignment': 'off', // Desliga a regra que proíbe atribuições de `any`. Pode ser muito restritiva em alguns projetos.
     '@typescript-eslint/no-extraneous-class': ['error', { allowStaticOnly: true }], // Evita classes que não possuem membros de instância, a menos que tenham apenas membros estáticos.
-  },
 };
