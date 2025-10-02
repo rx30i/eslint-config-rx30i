@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const meuObjetoDeRegras = {
+exports.eslintConfigRX30I = void 0;
+exports.eslintConfigRX30I = {
     'curly': 'error',
     'guard-for-in': 'error',
     'no-caller': 'error',

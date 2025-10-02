@@ -1,6 +1,6 @@
 import type { Linter } from 'eslint';
 
-const meuObjetoDeRegras: Partial<Record<string, Linter.RuleEntry>> = {
+export const eslintConfigRX30I: Partial<Record<string, Linter.RuleEntry>> = {
     'curly': 'error', // Exige o uso de chaves {} para todos os blocos de controle (if, for, etc.).
     'guard-for-in': 'error', // Exige que loops 'for...in' verifiquem a propriedade com `hasOwnProperty`.
     'no-caller': 'error', // Proíbe o uso de `arguments.caller` e `arguments.callee`, que são obsoletos.
