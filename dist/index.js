@@ -70,5 +70,13 @@ exports.eslintConfigRX30I = {
         }],
     '@typescript-eslint/no-unsafe-assignment': 'off',
     '@typescript-eslint/no-extraneous-class': ['error', { allowStaticOnly: true }],
+    "perfectionist/sort-imports": [
+        "error",
+        {
+            "type": "line-length",
+            "order": "desc",
+            "groups": ["external", "internal", "parent", "sibling", "index", "style", "object", "unknown"],
+        }
+    ]
 };
 //# sourceMappingURL=index.js.map

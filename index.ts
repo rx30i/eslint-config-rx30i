@@ -83,4 +83,14 @@ export const eslintConfigRX30I: Partial<Record<string, Linter.RuleEntry>> = {
     }], // Versão de `no-unused-vars` que entende TypeScript. Permite ignorar variáveis prefixadas com `_`.
     '@typescript-eslint/no-unsafe-assignment': 'off', // Desliga a regra que proíbe atribuições de `any`. Pode ser muito restritiva em alguns projetos.
     '@typescript-eslint/no-extraneous-class': ['error', { allowStaticOnly: true }], // Evita classes que não possuem membros de instância, a menos que tenham apenas membros estáticos.
+
+     "perfectionist/sort-imports": [
+      "error",
+      {
+        "type": "line-length", // O tipo de ordenação é por comprimento da linha
+        "order": "desc",       // 'desc' significa descendente (maior primeiro)
+        "groups": ["external", "internal", "parent", "sibling", "index", "style", "object", "unknown"],
+        // Adicionar 'groups' é recomendado para separar blocos lógicos
+      }
+    ]
 };
