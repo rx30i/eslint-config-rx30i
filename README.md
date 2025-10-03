@@ -4,26 +4,18 @@
 npm i --save-dev git@github.com:rx30i/eslint-config-rx30i.git
 ```
 
-# Sintaxe: npm install <usuário>/<repositório> --save-dev
-npm install YourUsername/eslint-config-rx30i --save-dev
+## Exemplo de uso
 
-Configure o .eslintrc.js (ou .json) do seu projeto:
-Agora, você só precisa "estender" a sua configuração. O ESLint remove o prefixo eslint-config- automaticamente.
+Configure o eslint.config.mjs do seu projeto, em rules importe as novas regras:
 
-Crie um arquivo .eslintrc.js na raiz do seu projeto com o seguinte conteúdo:
+```javascript
+import { eslintConfigRX30I } from 'eslint-config-rx30i/dist/index.js';
 
-
-// /caminho/para/meu-outro-projeto/.eslintrc.js
-
-module.exports = {
-  // Aqui você estende a sua configuração compartilhada.
-  // O nome 'rx30i' vem do nome do pacote 'eslint-config-rx30i'.
-  extends: 'rx30i',
-
-  // Você ainda pode sobrescrever regras ou adicionar configurações específicas
-  // para este projeto, se necessário.
-  rules: {
-    // Exemplo: neste projeto específico, quero que 'no-console' seja um erro.
-    'no-console': 'error',
-  }
-};
+export default tseslint.config(
+  {
+    rules: {
+      ...eslintConfigRX30I,
+    },
+  },
+);
+```

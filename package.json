@@ -15,8 +15,5 @@
   "license": "ISC",
   "peerDependencies": {
     "eslint": "^9.18.0"
-  },
-  "devDependencies": {
-    "eslint-plugin-perfectionist": "^4.15.0"
   }
 }

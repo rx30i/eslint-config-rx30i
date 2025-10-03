@@ -1,36 +1,36 @@
 import type { Linter } from 'eslint';
 
 export const eslintConfigRX30I: Partial<Record<string, Linter.RuleEntry>> = {
-    'curly': 'error', // Exige o uso de chaves {} para todos os blocos de controle (if, for, etc.).
-    'guard-for-in': 'error', // Exige que loops 'for...in' verifiquem a propriedade com `hasOwnProperty`.
-    'no-caller': 'error', // Proíbe o uso de `arguments.caller` e `arguments.callee`, que são obsoletos.
-    'no-extend-native': 'error', // Proíbe a modificação de protótipos de objetos nativos (ex: Array.prototype.meuMetodo).
-    'no-extra-bind': 'error', // Evita o uso desnecessário da função `.bind()`.
-    'no-invalid-this': 'error', // Proíbe o uso de `this` fora de classes ou funções vinculadas a um objeto.
-    'no-multi-str': 'error', // Previne strings de múltiplas linhas usando uma barra invertida, que é uma prática antiga e propensa a erros.
-    'no-new-wrappers': 'error', // Proíbe o uso de construtores para tipos primitivos, como `new String('oi')` ou `new Number(10)`.
-    'no-throw-literal': 'error', // Restringe o `throw` para lançar apenas instâncias de `Error`. `throw 'erro'` se torna inválido.
-    'no-unexpected-multiline': 'error', // Ajuda a evitar erros onde o JavaScript interpreta mal uma quebra de linha.
-    'no-with': 'error', // Proíbe o uso da instrução `with`, que é confusa e depreciada.
+    'curly'                       : 'error', // Exige o uso de chaves {} para todos os blocos de controle (if, for, etc.).
+    'guard-for-in'                : 'error', // Exige que loops 'for...in' verifiquem a propriedade com `hasOwnProperty`.
+    'no-caller'                   : 'error', // Proíbe o uso de `arguments.caller` e `arguments.callee`, que são obsoletos.
+    'no-extend-native'            : 'error', // Proíbe a modificação de protótipos de objetos nativos (ex: Array.prototype.meuMetodo).
+    'no-extra-bind'               : 'error', // Evita o uso desnecessário da função `.bind()`.
+    'no-invalid-this'             : 'error', // Proíbe o uso de `this` fora de classes ou funções vinculadas a um objeto.
+    'no-multi-str'                : 'error', // Previne strings de múltiplas linhas usando uma barra invertida, que é uma prática antiga e propensa a erros.
+    'no-new-wrappers'             : 'error', // Proíbe o uso de construtores para tipos primitivos, como `new String('oi')` ou `new Number(10)`.
+    'no-throw-literal'            : 'error', // Restringe o `throw` para lançar apenas instâncias de `Error`. `throw 'erro'` se torna inválido.
+    'no-unexpected-multiline'     : 'error', // Ajuda a evitar erros onde o JavaScript interpreta mal uma quebra de linha.
+    'no-with'                     : 'error', // Proíbe o uso da instrução `with`, que é confusa e depreciada.
     'prefer-promise-reject-errors': 'error', // Exige que Promises sejam rejeitadas com objetos `Error`.
-    'no-array-constructor': 'error', // Proíbe o uso de `new Array()` em favor da sintaxe literal `[]`.
-    'no-new-object': 'error', // Proíbe o uso de `new Object()` em favor da sintaxe literal `{}`.
-    'constructor-super': 'error', // Garante que construtores de classes derivadas chamem `super()`.
-    'no-new-symbol': 'error', // Impede o uso do construtor `new Symbol()`, que gera um erro.
-    'no-this-before-super': 'error', // Garante que `this` não seja usado antes de `super()` em construtores de classes derivadas.
-    'new-cap': ['error', { capIsNew: false }], // Exige que construtores comecem com letra maiúscula (ex: `new Pessoa()`), mas permite chamadas como `express.Router()`.
+    'no-array-constructor'        : 'error', // Proíbe o uso de `new Array()` em favor da sintaxe literal `[]`.
+    'no-new-object'               : 'error', // Proíbe o uso de `new Object()` em favor da sintaxe literal `{}`.
+    'constructor-super'           : 'error', // Garante que construtores de classes derivadas chamem `super()`.
+    'no-new-symbol'               : 'error', // Impede o uso do construtor `new Symbol()`, que gera um erro.
+    'no-this-before-super'        : 'error', // Garante que `this` não seja usado antes de `super()` em construtores de classes derivadas.
+    'new-cap'                     : ['error', { capIsNew: false }], // Exige que construtores comecem com letra maiúscula (ex: `new Pessoa()`), mas permite chamadas como `express.Router()`.
 
     // --- Variáveis ---
 
     'no-unused-vars': ['error', { args: 'none', caughtErrors: 'none' }], // Alerta sobre variáveis declaradas mas não usadas. Ignora argumentos de função e erros capturados em catch.
-    'one-var': ['error', { var: 'never', let: 'never', const: 'never' }], // Força a declaração de uma variável por instrução (uma por `let`, `const` ou `var`).
-    'no-var': 'error', // Exige o uso de `let` ou `const` em vez de `var`.
-    'prefer-const': ['error', { destructuring: 'all' }], // Sugere o uso de `const` para variáveis que nunca são reatribuídas.
+    'one-var'       : ['error', { var: 'never', let: 'never', const: 'never' }], // Força a declaração de uma variável por instrução (uma por `let`, `const` ou `var`).
+    'no-var'        : 'error', // Exige o uso de `let` ou `const` em vez de `var`.
+    'prefer-const'  : ['error', { destructuring: 'all' }], // Sugere o uso de `const` para variáveis que nunca são reatribuídas.
 
     // --- ES6 (ECMAScript 2015+) ---
 
     'prefer-rest-params': 'error', // Recomenda o uso de "rest parameters" (`...args`) em vez do objeto `arguments`.
-    'prefer-spread': 'error', // Recomenda o uso do "spread operator" (`...arr`) em vez de `.apply()`.
+    'prefer-spread'     : 'error', // Recomenda o uso do "spread operator" (`...arr`) em vez de `.apply()`.
 
     // --- Estilo de Código e Formatação (Stylistic Issues) ---
 
@@ -71,10 +71,9 @@ export const eslintConfigRX30I: Partial<Record<string, Linter.RuleEntry>> = {
     'rest-spread-spacing': 'error', // Proíbe espaço entre o operador spread/rest (`...`) e sua expressão.
     'yield-star-spacing': ['error', 'after'], // Controla o espaçamento para o `*` em `yield*`.
 
+
     // --- Regras Específicas para TypeScript (@typescript-eslint) ---
 
-    // Desabilita a regra base de `no-unused-vars` para usar a versão do TypeScript, que entende interfaces, tipos, etc.
-    //'no-unused-vars': 'off',
     '@typescript-eslint/no-unused-vars': ['error', {
       caughtErrors: 'all',
       caughtErrorsIgnorePattern: '^_',
@@ -83,14 +82,4 @@ export const eslintConfigRX30I: Partial<Record<string, Linter.RuleEntry>> = {
     }], // Versão de `no-unused-vars` que entende TypeScript. Permite ignorar variáveis prefixadas com `_`.
     '@typescript-eslint/no-unsafe-assignment': 'off', // Desliga a regra que proíbe atribuições de `any`. Pode ser muito restritiva em alguns projetos.
     '@typescript-eslint/no-extraneous-class': ['error', { allowStaticOnly: true }], // Evita classes que não possuem membros de instância, a menos que tenham apenas membros estáticos.
-
-     "perfectionist/sort-imports": [
-      "error",
-      {
-        "type": "line-length", // O tipo de ordenação é por comprimento da linha
-        "order": "desc",       // 'desc' significa descendente (maior primeiro)
-        "groups": ["external", "internal", "parent", "sibling", "index", "style", "object", "unknown"],
-        // Adicionar 'groups' é recomendado para separar blocos lógicos
-      }
-    ]
 };
