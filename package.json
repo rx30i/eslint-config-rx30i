@@ -14,6 +14,6 @@
   "author": "RX30I",
   "license": "ISC",
   "peerDependencies": {
-    "eslint": "^9.18.0"
+    "eslint": ">=9.18.0"
   }
 }
